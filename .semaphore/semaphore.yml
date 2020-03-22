@@ -1,0 +1,26 @@
+version: v1.0
+name: Initial Pipeline
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+blocks:
+  - name: 'Industrial CI'
+    task:
+      env_vars:
+        - name: ROS_DISTRO
+          value: "melodic"
+      jobs:
+        - name: 'black'
+          commands:
+            - checkout
+            - git clone --quiet --depth 1 https://github.com/mortenfyhn/industrial_ci.git .industrial_ci --branch feature/black
+            - .industrial_ci/ci.sh
+          env_vars:
+            - name: BLACK_CHECK
+              value: "true"
+        - name: 'build'
+          commands:
+            - checkout
+            - git clone --quiet --depth 1 https://github.com/mortenfyhn/industrial_ci.git .industrial_ci --branch feature/black
+            - .industrial_ci/ci.sh
