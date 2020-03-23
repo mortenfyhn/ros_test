@@ -10,6 +10,7 @@ blocks:
       env_vars:
         - name: ROS_DISTRO
           value: "melodic"
+
       jobs:
         - name: 'black'
           commands:
@@ -19,8 +20,9 @@ blocks:
           env_vars:
             - name: BLACK_CHECK
               value: "true"
+
         - name: 'build'
           commands:
             - checkout
-            - git clone --quiet --depth 1 https://github.com/mortenfyhn/industrial_ci.git .industrial_ci --branch feature/black
+            - git clone --quiet --depth 1 https://github.com/mortenfyhn/industrial_ci.git .industrial_ci --branch feature/roslaunch-check
             - .industrial_ci/ci.sh
