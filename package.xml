@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>rospy_test</name>
+  <name>ros_test</name>
   <version>0.0.0</version>
   <description>Just some stuff for testing.</description>
   <maintainer email="morten.fyhn.amundsen@gmail.com">Morten Fyhn Amundsen</maintainer>

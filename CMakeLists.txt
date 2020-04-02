@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(rospy_test)
+project(ros_test)
 
 find_package(catkin REQUIRED COMPONENTS rospy)
 
