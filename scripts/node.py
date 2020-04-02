@@ -3,5 +3,5 @@
 import rospy
 
 if __name__ == "__main__":
-    rospy.init_node("rospy_test")
+    rospy.init_node("ros_test")
     rospy.spin()

@@ -1,5 +1,6 @@
 <launch>
 
-  <node pkg="rospy_test" type="node.py" name="node" output="screen"/>
+  <node pkg="ros_test" type="node.py" name="node_py" output="screen"/>
+  <node pkg="ros_test" type="node" name="node_cpp" output="screen"/>
 
 </launch>
